@@ -12,8 +12,7 @@ blocks:
           commands:
             - checkout
             - cache restore
-            - bundle config set deployment 'true'
-            - bundle install --path vendor/bundle
+            - bundle install --deployment --path vendor/bundle
             - cache store
   - name: Tests
     task:
